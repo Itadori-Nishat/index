@@ -1,0 +1,83 @@
+body{
+    box-sizing: border-box;
+    background-color: rgb(161, 185, 203);
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    margin: 1rem;
+    padding: 10px;
+    box-shadow: 6px 6px 6px #cfa9be, -6px -6px 6px #ffffff;
+    border-radius: 15px;
+    background: #c9c2c2;
+}
+.heart:hover{
+    color: #e31e8b;
+    cursor: pointer;
+    transition: .2s;
+}
+.like:hover{
+    color: rgb(64, 64, 227);
+    cursor: pointer;
+    transition: .2s;
+}
+.star:hover{
+    color: rgb(210, 144, 29);
+    cursor: pointer;
+    transition: .2s;
+}
+.heart:active,
+.like:active,
+.star:active
+{
+    transform: scale(1.2);
+    box-shadow: inset -2px -2px 2px rgb(175, 103, 105),
+    inset 2px 2px 12px rgb(195, 190, 190);
+
+}
+
+
+.input-group{
+    margin-top: 3rem;
+    position: relative;
+}
+
+label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(10px, 10px);
+    transform-origin: left;
+    transition: transform .23s;
+}
+
+#name{
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: transparent;
+    outline: 2px solid #fff;
+}
+
+.input-group:focus-within label{
+    transform: 
+    translate(0, -30px) scale(.8);
+    color: #2e0eac;
+}
+.input-group:focus-within #name{
+    outline-color: #b237a6;
+}
+.input-group span{
+    width: 5px;
+    height: 5px;
+    background: linear-gradient(90deg, transparent, #d60d0d);
+    animation: sanim 1s infinite;
+}
+@keyframes sanime{
+    0%   {top: 0px;}
+    25%  {top: 200px;}
+    75%  {top: 50px}
+    100% {top: 100px;}
+}
